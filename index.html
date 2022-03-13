@@ -1,0 +1,769 @@
+<!-- Web Page forked from https://disperse.app/ -->
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>disperse (Enhanced by Brendan C. Lee)</title>
+
+  <link rel="apple-touch-icon" href="https://disperse.brendanc.me/logo_disperse.png">
+  <link rel="icon" type="image/png" href="https://disperse.brendanc.me/logo_disperse.png">
+
+  <meta name="description" content="distribute ether or tokens to multiple addresses. With Enhancements added by Brendan C. Lee">
+  <meta name="image" content="https://disperse.app/disperse.png">
+
+  <!-- google -->
+  <meta itemprop="name" content="disperse">
+  <meta itemprop="description" content="distribute ether or tokens to multiple addresses. With Enhancement added by Brendan C. Lee">
+  <meta itemprop="image" content="https://disperse.app/disperse.png">
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="disperse">
+  <meta name="twitter:description" content="distribute ether or tokens to multiple addresses. With Enhancement added by Brendan C. Lee">
+  <!-- facebook -->
+  <meta name="og:title" content="disperse">
+  <meta name="og:description" content="distribute ether or tokens to multiple addresses. With Enhancement added by Brendan C. Lee">
+  <meta name="og:type" content="website">
+<style type="text/css">/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+</style><style type="text/css">@charset "UTF-8";
+
+/* Import ET Book styles
+   adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
+
+@font-face { font-family: "et-book";
+             src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+             src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+             font-weight: normal;
+             font-style: normal; }
+
+@font-face { font-family: "et-book";
+             src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+             src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+             font-weight: normal;
+             font-style: italic; }
+
+@font-face { font-family: "et-book";
+             src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+             src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+             font-weight: bold;
+             font-style: normal; }
+
+@font-face { font-family: "et-book-roman-old-style";
+             src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+             src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+             font-weight: normal;
+             font-style: normal; }
+
+/* Tufte CSS styles */
+html { font-size: 14px; }
+
+body { width: 87.5%;
+       margin-left: auto;
+       margin-right: auto;
+       padding-left: 12.5%;
+       font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       background-color: #fffff8;
+       color: #111;
+       max-width: 1400px;
+       counter-reset: sidenote-counter; }
+
+h1 { font-weight: 400;
+     margin-top: 4rem;
+     margin-bottom: 1.5rem;
+     font-size: 3.2rem;
+     line-height: 1; }
+
+h2 { font-style: italic;
+     font-weight: 400;
+     margin-top: 2.1rem;
+     margin-bottom: 1.4rem;
+     font-size: 2.2rem;
+     line-height: 1; }
+
+h3 { font-style: italic;
+     font-weight: 400;
+     font-size: 1.7rem;
+     margin-top: 2rem;
+     margin-bottom: 1.4rem;
+     line-height: 1; }
+
+hr { display: block;
+     height: 1px;
+     width: 55%;
+     border: 0;
+     border-top: 1px solid #ccc;
+     margin: 1em 0;
+     padding: 0; }
+
+p.subtitle { font-style: italic;
+             margin-top: 1rem;
+             margin-bottom: 1rem;
+             font-size: 1.8rem;
+             display: block;
+             line-height: 1; }
+
+.numeral { font-family: et-book-roman-old-style; }
+
+.danger { color: red; }
+
+article { position: relative;
+          padding: 5rem 0rem; }
+
+section { padding-top: 1rem;
+          padding-bottom: 1rem; }
+
+p, ol, ul { font-size: 1.4rem;
+            line-height: 2rem; }
+
+p { margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline; }
+
+/* Chapter Epigraphs */
+div.epigraph { margin: 5em 0; }
+
+div.epigraph > blockquote { margin-top: 3em;
+                            margin-bottom: 3em; }
+
+div.epigraph > blockquote, div.epigraph > blockquote > p { font-style: italic; }
+
+div.epigraph > blockquote > footer { font-style: normal; }
+
+div.epigraph > blockquote > footer > cite { font-style: italic; }
+/* end chapter epigraphs styles */
+
+blockquote { font-size: 1.4rem; }
+
+blockquote p { width: 55%;
+               margin-right: 40px; }
+
+blockquote footer { width: 55%;
+                    font-size: 1.1rem;
+                    text-align: right; }
+
+/* section > p, section > footer, section > table { width: 55%; } */
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+/* section > ol, section > ul { width: 50%; */
+                             /* -webkit-padding-start: 5%; } */
+
+li:not(:first-child) { margin-top: 0.25rem; }
+
+figure { padding: 0;
+         border: 0;
+         font-size: 100%;
+         font: inherit;
+         vertical-align: baseline;
+         max-width: 55%;
+         -webkit-margin-start: 0;
+         -webkit-margin-end: 0;
+         margin: 0 0 3em 0; }
+
+figcaption { float: right;
+             clear: right;
+             margin-top: 0;
+             margin-bottom: 0;
+             font-size: 1.1rem;
+             line-height: 1.6;
+             vertical-align: baseline;
+             position: relative;
+             max-width: 40%; }
+
+figure.fullwidth figcaption { margin-right: 24%; }
+
+/* Links: replicate underline that clears descenders */
+a:link, a:visited { color: inherit; }
+
+a:link { text-decoration: none;
+         background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
+         background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+         -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+         background-repeat: no-repeat, no-repeat, repeat-x;
+         text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+         background-position: 0% 93%, 100% 93%, 0% 93%; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) { a:link { background-position-y: 87%, 87%, 87%; } }
+
+a:link::selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+                    background: #b4d5fe; }
+
+a:link::-moz-selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+                         background: #b4d5fe; }
+
+/* Sidenotes, margin notes, figures, captions */
+img { max-width: 100%; }
+
+.sidenote, .marginnote { float: right;
+                         clear: right;
+                         margin-right: -60%;
+                         width: 50%;
+                         margin-top: 0;
+                         margin-bottom: 0;
+                         font-size: 1.1rem;
+                         line-height: 1.3;
+                         vertical-align: baseline;
+                         position: relative; }
+
+.sidenote-number { counter-increment: sidenote-counter; }
+
+.sidenote-number:after, .sidenote:before { font-family: et-book-roman-old-style;
+                                           position: relative;
+                                           vertical-align: baseline; }
+
+.sidenote-number:after { content: counter(sidenote-counter);
+                         font-size: 1rem;
+                         top: -0.5rem;
+                         left: 0.1rem; }
+
+.sidenote:before { content: counter(sidenote-counter) " ";
+                   font-size: 1rem;
+                   top: -0.5rem; }
+
+blockquote .sidenote, blockquote .marginnote { margin-right: -82%;
+                                               min-width: 59%;
+                                               text-align: left; }
+
+div.fullwidth, table.fullwidth { width: 100%; }
+
+div.table-wrapper { overflow-x: auto;
+                    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
+
+.sans { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        letter-spacing: .03em; }
+
+code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+       font-size: 1.0rem;
+       line-height: 1.42; }
+
+.sans > code { font-size: 1.2rem; }
+
+h1 > code, h2 > code, h3 > code { font-size: 0.80em; }
+
+.marginnote > code, .sidenote > code { font-size: 1rem; }
+
+pre.code { font-size: 0.9rem;
+           width: 52.5%;
+           margin-left: 2.5%;
+           overflow-x: auto; }
+
+pre.code.fullwidth { width: 90%; }
+
+.fullwidth { max-width: 90%;
+             clear:both; }
+
+span.newthought { font-variant: small-caps;
+                  font-size: 1.2em; }
+
+input.margin-toggle { display: none; }
+
+label.sidenote-number { display: inline; }
+
+label.margin-toggle:not(.sidenote-number) { display: none; }
+
+.iframe-wrapper { position: relative;
+                  padding-bottom: 56.25%; /* 16:9 */
+                  padding-top: 25px;
+                  height: 0; }
+
+.iframe-wrapper iframe { position: absolute;
+                         top: 0;
+                         left: 0;
+                         width: 100%;
+                         height: 100%; }
+
+@media (max-width: 760px) { body { width: 84%;
+                                   padding-left: 8%;
+                                   padding-right: 8%; }
+                            hr, section > p, section > footer, section > table { width: 100%; }
+                            pre.code { width: 97%; }
+                            section > ol { width: 90%; }
+                            section > ul { width: 90%; }
+                            figure { max-width: 90%; }
+                            figcaption, figure.fullwidth figcaption { margin-right: 0%;
+                                                                      max-width: none; }
+                            blockquote { margin-left: 1.5em;
+                                         margin-right: 0em; }
+                            blockquote p, blockquote footer { width: 100%; }
+                            label.margin-toggle:not(.sidenote-number) { display: inline; }
+                            .sidenote, .marginnote { display: none; }
+                            .margin-toggle:checked + .sidenote,
+                            .margin-toggle:checked + .marginnote { display: block;
+                                                                   float: left;
+                                                                   left: 1rem;
+                                                                   clear: both;
+                                                                   width: 95%;
+                                                                   margin: 1rem 2.5%;
+                                                                   vertical-align: baseline;
+                                                                   position: relative; }
+                            label { cursor: pointer; }
+                            div.table-wrapper, table { width: 85%; }
+                            img { width: 100%; } }
+</style><style type="text/css">body {
+  padding-left: 0 !important; }
+
+article {
+  margin: auto;
+  max-width: 600px; }
+
+.row {
+  padding-bottom: 1em; }
+
+.inline {
+  display: inline-block; }
+
+.block {
+  display: block; }
+
+.pr {
+  padding-right: 1em; }
+
+.pb {
+  padding-bottom: 1em; }
+
+.flex {
+  display: flex;
+  /* border: 1px goldenrod solid */
+  width: 100%; }
+
+.fg {
+  flex-grow: 1; }
+
+.bar {
+  flex-grow: 1;
+  margin: auto 0.3em;
+  border-bottom: 1px black solid; }
+
+.end-bar {
+  flex-grow: 1;
+  margin: auto 0;
+  height: 1.4rem;
+  border-bottom: 1px black solid; }
+
+.eth {
+  display: inline-block;
+  position: relative;
+  margin-left: -50px;
+  bottom: 20px; }
+
+input, label {
+  font-size: 1.4rem;
+  line-height: 2rem; }
+
+ul {
+  list-style: none;
+  padding-left: 0; }
+
+.shadow {
+  width: 100%;
+  padding-right: 6px; }
+
+textarea {
+  display: block;
+  border: none;
+  border-bottom: 2px #111111 solid;
+  background: aquamarine;
+  padding: .7rem;
+  font-size: 1.4rem;
+  width: 100%;
+  position: relative;
+  height: 8.4rem;
+  resize: none;
+  margin-bottom: 1.4rem; }
+
+textarea:focus {
+  outline: none; }
+
+input[type="submit"] {
+  border: none;
+  font-style: italic;
+  padding: .7rem;
+  background: aquamarine;
+  box-shadow: 6px 6px crimson; }
+
+input[type="submit"]:focus {
+  outline: none; }
+
+.red {
+  color: crimson; }
+
+.info {
+  display: flex;
+  align-items: baseline; }
+
+.info > div {
+  font-size: 1.4rem;
+  margin-left: 1.4rem; }
+
+.rows > * {
+  padding-bottom: 1rem; }
+
+.error {
+  font-style: italic;
+  color: crimson; }
+
+.pending {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6); }
+
+.expand {
+  flex-grow: 1; }
+</style><style type="text/css">disperse-logo header,[data-is="disperse-logo"] header{ display: flex; align-items: baseline; } disperse-logo sup,[data-is="disperse-logo"] sup{ font-size: 1.4rem; margin-left: .7rem; top: -1.4rem; } disperse-logo a,[data-is="disperse-logo"] a{ font-size: 1.4rem; margin-right: 1.4rem; } disperse-logo .eth svg path,[data-is="disperse-logo"] .eth svg path{ transition: fill .3s !important; } disperse-logo .active svg path,[data-is="disperse-logo"] .active svg path{ fill: aquamarine !important; } disperse-logo .inactive svg path,[data-is="disperse-logo"] .inactive svg path{ fill: crimson !important; }
+disperse-currency .chooser,[data-is="disperse-currency"] .chooser{ font-style: italic; margin-top: 2.1rem; margin-bottom: 1.4rem; } disperse-currency label,[data-is="disperse-currency"] label{ margin-right: .25rem; font-size: 2.2rem; } disperse-currency input[type="radio"],[data-is="disperse-currency"] input[type="radio"]{ display: none; color: #111111; } disperse-currency input[type="radio"] + label,[data-is="disperse-currency"] input[type="radio"] + label{ display: inline-block; font-size: 2.2rem; color: rgba(0, 0, 0, 0.5); border-bottom: 2px rgba(0, 0, 0, 0.5) solid; } disperse-currency input[type="radio"]:checked + label,[data-is="disperse-currency"] input[type="radio"]:checked + label{ color: #111111; border-bottom: 2px #111111 solid; background: aquamarine; }
+disperse-addresses .accent,[data-is="disperse-addresses"] .accent{ font-style: italic; } disperse-addresses .bar,[data-is="disperse-addresses"] .bar{ margin: auto 0.3em; border-bottom: 1px #111111 solid; } disperse-addresses .fade,[data-is="disperse-addresses"] .fade{ transition: color .3s; } disperse-addresses .negative,[data-is="disperse-addresses"] .negative{ color: crimson; }
+disperse-amount .sc,[data-is="disperse-amount"] .sc{ font-variant: all-small-caps; }
+disperse-transaction { font-size: 1.4rem; display: flex; align-items: baseline; margin-bottom: 1.4rem; } disperse-transaction .status,[data-is="disperse-transaction"] .status{ margin-left: 1.4rem; font-style: italic; } disperse-transaction .status .pending,[data-is="disperse-transaction"] .status .pending{ animation: pulse 1.5s infinite; animation-direction: alternate; animation-timing-function: ease-in-out; } disperse-transaction .status .success,[data-is="disperse-transaction"] .status .success{ color: #28bd14; } disperse-transaction .status .failed,[data-is="disperse-transaction"] .status .failed{ color: #d43939; } disperse-transaction .hash,[data-is="disperse-transaction"] .hash{ font-style: normal; font-size: 1rem; } disperse-transaction input[type="submit"]:disabled,[data-is="disperse-transaction"] input[type="submit"]:disabled{ opacity: .4; } disperse-transaction.secondary input { background: none; border: 1px crimson solid; } @keyframes pulse { 0% { color: rgba(0, 0, 0, 0.2); } 100% { color: rgba(0, 0, 0, 0.5); } }
+disperse-token-loader input[type="text"],[data-is="disperse-token-loader"] input[type="text"]{ flex-grow: 1; border: none; border-bottom: 2px #111 solid; padding: .7rem; background: aquamarine; margin-right: 1.4rem; } disperse-token-loader input[type="text"]:focus,[data-is="disperse-token-loader"] input[type="text"]:focus{ outline: none; }</style></head>
+<body>
+  <article>
+    <disperse-app><section> <disperse-logo state="4"><header> <div class="eth active"><svg id="svg" version="1.1" width="50" height="50" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="display: block;"><g id="svgg"><path id="path0" d="M196.423 21.530 C 195.612 23.471,171.105 64.622,141.963 112.977 C 112.821 161.331,88.735 201.528,88.437 202.304 C 88.050 203.313,103.882 213.162,143.951 236.838 L 200.008 269.960 256.049 236.820 C 296.310 213.011,311.937 203.279,311.546 202.259 C 309.521 196.981,200.545 18.000,199.356 18.000 C 198.554 18.000,197.234 19.588,196.423 21.530 M88.570 226.125 C 90.730 229.818,199.545 382.920,200.000 382.906 C 200.752 382.883,312.004 225.671,311.574 225.240 C 311.168 224.835,207.179 286.081,202.841 289.280 L 200.182 291.242 146.341 259.454 C 116.728 241.971,91.406 226.961,90.070 226.100 C 87.855 224.673,87.722 224.675,88.570 226.125 " stroke="none" fill="#cccccc" fill-rule="evenodd"></path></g></svg></div> <h1>disperse (Enhanced by Brendan C. Lee)<sup></sup></h1> <div class="expand"></div> <div><a target="_blank"></a><a href="https://t.me/disperse" target="_blank">telegram</a></div> </header> <p><em>verb</em><span style="font-style: normal"> distribute ether or tokens to multiple addresses</span></p></disperse-logo> </section>   <section> <h2>connect to wallet</h2>  <p>logged in as 0xa9d89a5caf6480496acc8f4096fe254f24329ef0</p> </section> <section> <disperse-currency><div class="chooser"> <label>send</label> <input type="radio" value="ether" name="what" id="ether"> <label for="ether">ether</label> <label>or</label> <input type="radio" value="token" name="what" id="token"> <label for="token">token</label> </div></disperse-currency>  </section>  <section style="display: none;" hidden=""> <h2>recipients and amounts</h2> <p>enter one address and amount in ETH on each line. supports any format.</p> <div class="shadow"> <textarea ref="addresses" spellcheck="false" placeholder="0x314ab97b76e39d63c78d5c86c2daf8eaa306b182 3.141592
+0x271bffabd0f79b8bd4d7a1c245b7ec5b576ea98a,2.7182
+0x141ca95b6177615fb1417cf70e930e102bf8f584=1.41421"></textarea> </div> </section>  </disperse-app>
+  </article>
+
+  <script src="./bundle.js"></script>
+
+
+</body></html>
