@@ -4,26 +4,53 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>disperse (Enhanced by Brendan C. Lee)</title>
+  <title>Disperse | Incinerate Protocol</title>
 
-  <link rel="apple-touch-icon" href="https://disperse.brendanc.me/logo_disperse.png">
-  <link rel="icon" type="image/png" href="https://disperse.brendanc.me/logo_disperse.png">
-
-  <meta name="description" content="distribute ether or tokens to multiple addresses. With Enhancements added by Brendan C. Lee">
-  <meta name="image" content="https://disperse.app/disperse.png">
+  <link rel="apple-touch-icon" href="https://incinerate.cash/img/ex_icons/ember.png">
+  <link rel="icon" type="image/png" href="https://incinerate.cash/img/ex_icons/ember.png">
+  <meta name="description" content="distribute BCH or tokens to multiple addresses.">
+  <meta name="image" content="https://emberswap.com/_next/image?url=%2Flogo.png&w=1080&q=75">
 
   <!-- google -->
   <meta itemprop="name" content="disperse">
-  <meta itemprop="description" content="distribute ether or tokens to multiple addresses. With Enhancement added by Brendan C. Lee">
-  <meta itemprop="image" content="https://disperse.app/disperse.png">
+  <meta itemprop="description" content="distribute BCH or tokens to multiple addresses.">
+  <meta itemprop="image" content="https://emberswap.com/_next/image?url=%2Flogo.png&w=1080&q=75">
   <!-- twitter -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="disperse">
-  <meta name="twitter:description" content="distribute ether or tokens to multiple addresses. With Enhancement added by Brendan C. Lee">
+  <meta name="twitter:description" content="distribute BCH or tokens to multiple addresses.">
   <!-- facebook -->
   <meta name="og:title" content="disperse">
-  <meta name="og:description" content="distribute ether or tokens to multiple addresses. With Enhancement added by Brendan C. Lee">
+  <meta name="og:description" content="distribute BCH or tokens to multiple addresses.">
   <meta name="og:type" content="website">
+  <script src="https://www.googletagmanager.com/gtag/js?id=UA-195728045-1" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script type="8ed4d3d05e4706da825436ae-text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-195728045-1', { page_path: window.location.pathname });
+  </script>
+  <link rel="stylesheet" href="css/themes/dark.css" />
+  <meta name="next-head-count" content="17" />
+  <link rel="preload" href="_next/static/css/b34809c463bb7fda.css" as="style" />
+  <link rel="stylesheet" href="_next/static/css/b34809c463bb7fda.css" data-n-g="" />
+  <link rel="preload" href="_next/static/css/69f81e06845cd7ae.css" as="style" />
+  <link rel="stylesheet" href="_next/static/css/69f81e06845cd7ae.css" data-n-p="" />
+  <noscript data-n-css=""></noscript>
+  <script defer="" nomodule="" src="_next/static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/chunks/webpack-c1cc213276f60569.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/chunks/framework-d9c9992982ceff03.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/chunks/main-7a7925d5497d38cd.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/chunks/pages/_app-774e91ff2f28f21a.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/chunks/5000-777a257dfa566c9b.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/chunks/668-dd5fd389fabb3a8a.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/chunks/3829-6b1a6e53423f3c3f.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/chunks/pages/markets-1d204b3b38872514.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/5RZLnNJ1bjI0MdcO0Y7OA/_buildManifest.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/5RZLnNJ1bjI0MdcO0Y7OA/_ssgManifest.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script src="_next/static/5RZLnNJ1bjI0MdcO0Y7OA/_middlewareManifest.js" defer="" type="8ed4d3d05e4706da825436ae-text/javascript"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 <style type="text/css">/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -370,29 +397,50 @@ template {
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
 
-@font-face { font-family: "et-book";
-             src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
-             src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
-             font-weight: normal;
-             font-style: normal; }
-
-@font-face { font-family: "et-book";
-             src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-             src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
-             font-weight: normal;
-             font-style: italic; }
-
-@font-face { font-family: "et-book";
-             src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-             src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
-             font-weight: bold;
-             font-style: normal; }
-
-@font-face { font-family: "et-book-roman-old-style";
-             src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
-             src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
-             font-weight: normal;
-             font-style: normal; }
+   @font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./files/montserrat-cyrillic-ext-500-normal.woff2') format('woff2'), url('./files/montserrat-all-500-normal.woff') format('woff');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* montserrat-cyrillic-500-normal*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./files/montserrat-cyrillic-500-normal.woff2') format('woff2'), url('./files/montserrat-all-500-normal.woff') format('woff');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* montserrat-vietnamese-500-normal*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./files/montserrat-vietnamese-500-normal.woff2') format('woff2'), url('./files/montserrat-all-500-normal.woff') format('woff');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* montserrat-latin-ext-500-normal*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./files/montserrat-latin-ext-500-normal.woff2') format('woff2'), url('./files/montserrat-all-500-normal.woff') format('woff');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* montserrat-latin-500-normal*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./files/montserrat-latin-500-normal.woff2') format('woff2'), url('./files/montserrat-all-500-normal.woff') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* Tufte CSS styles */
 html { font-size: 14px; }
@@ -401,8 +449,7 @@ body { width: 87.5%;
        margin-left: auto;
        margin-right: auto;
        padding-left: 12.5%;
-       font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-       background-color: #fffff8;
+       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
        color: #111;
        max-width: 1400px;
        counter-reset: sidenote-counter; }
@@ -515,17 +562,8 @@ figure.fullwidth figcaption { margin-right: 24%; }
 /* Links: replicate underline that clears descenders */
 a:link, a:visited { color: inherit; }
 
-a:link { text-decoration: none;
-         background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
-         background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
-         -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-         -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-         background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-         background-repeat: no-repeat, no-repeat, repeat-x;
-         text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
-         background-position: 0% 93%, 100% 93%, 0% 93%; }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) { a:link { background-position-y: 87%, 87%, 87%; } }
+
 
 a:link::selection { text-shadow: 0.03em 0 #6e0d0d, -0.03em 0 #6e0d0d, 0 0.03em #6e0d0d, 0 -0.03em #6e0d0d, 0.06em 0 #6e0d0d, -0.06em 0 #6e0d0d, 0.09em 0 #6e0d0d, -0.09em 0 #6e0d0d, 0.12em 0 #6e0d0d, -0.12em 0 #6e0d0d, 0.15em 0 #6e0d0d, -0.15em 0 #6e0d0d;
                     background: #6e0d0d; }
@@ -703,8 +741,6 @@ ul {
 textarea {
   display: block;
   border: none;
-  border-bottom: 2px #111111 solid;
-  background: aquamarine;
   padding: .7rem;
   font-size: 1.4rem;
   width: 100%;
@@ -720,7 +756,6 @@ input[type="submit"] {
   border: none;
   font-style: italic;
   padding: .7rem;
-  background: aquamarine;
   box-shadow: 6px 6px crimson; }
 
 input[type="submit"]:focus {
@@ -750,20 +785,86 @@ input[type="submit"]:focus {
 
 .expand {
   flex-grow: 1; }
+  .st0 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #8DC351;
+}
 </style><style type="text/css">disperse-logo header,[data-is="disperse-logo"] header{ display: flex; align-items: baseline; } disperse-logo sup,[data-is="disperse-logo"] sup{ font-size: 1.4rem; margin-left: .7rem; top: -1.4rem; } disperse-logo a,[data-is="disperse-logo"] a{ font-size: 1.4rem; margin-right: 1.4rem; } disperse-logo .eth svg path,[data-is="disperse-logo"] .eth svg path{ transition: fill .3s !important; } disperse-logo .active svg path,[data-is="disperse-logo"] .active svg path{ fill: aquamarine !important; } disperse-logo .inactive svg path,[data-is="disperse-logo"] .inactive svg path{ fill: crimson !important; }
-disperse-currency .chooser,[data-is="disperse-currency"] .chooser{ font-style: italic; margin-top: 2.1rem; margin-bottom: 1.4rem; } disperse-currency label,[data-is="disperse-currency"] label{ margin-right: .25rem; font-size: 2.2rem; } disperse-currency input[type="radio"],[data-is="disperse-currency"] input[type="radio"]{ display: none; color: #111111; } disperse-currency input[type="radio"] + label,[data-is="disperse-currency"] input[type="radio"] + label{ display: inline-block; font-size: 2.2rem; color: rgba(0, 0, 0, 0.5); border-bottom: 2px rgba(0, 0, 0, 0.5) solid; } disperse-currency input[type="radio"]:checked + label,[data-is="disperse-currency"] input[type="radio"]:checked + label{ color: #111111; border-bottom: 2px #111111 solid; background: aquamarine; }
+disperse-currency .chooser,[data-is="disperse-currency"] .chooser{ font-style: italic; margin-top: 2.1rem; margin-bottom: 1.4rem; } disperse-currency label,[data-is="disperse-currency"] label{ margin-right: .25rem; font-size: 2.2rem; } disperse-currency input[type="radio"],[data-is="disperse-currency"] input[type="radio"]{ display: none; color: #111111; } disperse-currency input[type="radio"] + label,[data-is="disperse-currency"] input[type="radio"] + label{ display: inline-block; font-size: 2.2rem; color: rgba(0, 0, 0, 0.5); border-bottom: 2px rgba(0, 0, 0, 0.5) solid; } disperse-currency input[type="radio"]:checked + label,[data-is="disperse-currency"] input[type="radio"]:checked + label{ color: #111111; border-bottom: 2px #111111 solid; }
 disperse-addresses .accent,[data-is="disperse-addresses"] .accent{ font-style: italic; } disperse-addresses .bar,[data-is="disperse-addresses"] .bar{ margin: auto 0.3em; border-bottom: 1px #111111 solid; } disperse-addresses .fade,[data-is="disperse-addresses"] .fade{ transition: color .3s; } disperse-addresses .negative,[data-is="disperse-addresses"] .negative{ color: crimson; }
 disperse-amount .sc,[data-is="disperse-amount"] .sc{ font-variant: all-small-caps; }
 disperse-transaction { font-size: 1.4rem; display: flex; align-items: baseline; margin-bottom: 1.4rem; } disperse-transaction .status,[data-is="disperse-transaction"] .status{ margin-left: 1.4rem; font-style: italic; } disperse-transaction .status .pending,[data-is="disperse-transaction"] .status .pending{ animation: pulse 1.5s infinite; animation-direction: alternate; animation-timing-function: ease-in-out; } disperse-transaction .status .success,[data-is="disperse-transaction"] .status .success{ color: #28bd14; } disperse-transaction .status .failed,[data-is="disperse-transaction"] .status .failed{ color: #d43939; } disperse-transaction .hash,[data-is="disperse-transaction"] .hash{ font-style: normal; font-size: 1rem; } disperse-transaction input[type="submit"]:disabled,[data-is="disperse-transaction"] input[type="submit"]:disabled{ opacity: .4; } disperse-transaction.secondary input { background: none; border: 1px crimson solid; } @keyframes pulse { 0% { color: rgba(0, 0, 0, 0.2); } 100% { color: rgba(0, 0, 0, 0.5); } }
-disperse-token-loader input[type="text"],[data-is="disperse-token-loader"] input[type="text"]{ flex-grow: 1; border: none; border-bottom: 2px #111 solid; padding: .7rem; background: aquamarine; margin-right: 1.4rem; } disperse-token-loader input[type="text"]:focus,[data-is="disperse-token-loader"] input[type="text"]:focus{ outline: none; }</style></head>
+disperse-token-loader input[type="text"],[data-is="disperse-token-loader"] input[type="text"]{ flex-grow: 1; border: none; border-bottom: 2px #ffffff solid; padding: .7rem; margin-right: 1.4rem; } disperse-token-loader input[type="text"]:focus,[data-is="disperse-token-loader"] input[type="text"]:focus{ outline: none; }</style></head>
 <body>
   <article>
-    <disperse-app><section> <disperse-logo state="4"><header> <div class="eth active"><svg id="svg" version="1.1" width="50" height="50" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="display: block;"><g id="svgg"><path id="path0" d="M196.423 21.530 C 195.612 23.471,171.105 64.622,141.963 112.977 C 112.821 161.331,88.735 201.528,88.437 202.304 C 88.050 203.313,103.882 213.162,143.951 236.838 L 200.008 269.960 256.049 236.820 C 296.310 213.011,311.937 203.279,311.546 202.259 C 309.521 196.981,200.545 18.000,199.356 18.000 C 198.554 18.000,197.234 19.588,196.423 21.530 M88.570 226.125 C 90.730 229.818,199.545 382.920,200.000 382.906 C 200.752 382.883,312.004 225.671,311.574 225.240 C 311.168 224.835,207.179 286.081,202.841 289.280 L 200.182 291.242 146.341 259.454 C 116.728 241.971,91.406 226.961,90.070 226.100 C 87.855 224.673,87.722 224.675,88.570 226.125 " stroke="none" fill="#cccccc" fill-rule="evenodd"></path></g></svg></div> <h1>disperse (Enhanced by Brendan C. Lee)<sup></sup></h1> <div class="expand"></div> <div><a target="_blank"></a><a href="https://t.me/disperse" target="_blank">telegram</a></div> </header> <p><em>verb</em><span style="font-style: normal"> distribute ether or tokens to multiple addresses</span></p></disperse-logo> </section>   <section> <h2>connect to wallet</h2>  <p>logged in as 0xa9d89a5caf6480496acc8f4096fe254f24329ef0</p> </section> <section> <disperse-currency><div class="chooser"> <label>send</label> <input type="radio" value="ether" name="what" id="ether"> <label for="ether">ether</label> <label>or</label> <input type="radio" value="token" name="what" id="token"> <label for="token">token</label> </div></disperse-currency>  </section>  <section style="display: none;" hidden=""> <h2>recipients and amounts</h2> <p>enter one address and amount in ETH on each line. supports any format.</p> <div class="shadow"> <textarea ref="addresses" spellcheck="false" placeholder="0x314ab97b76e39d63c78d5c86c2daf8eaa306b182 3.141592
+    <disperse-app><section> <disperse-logo state="4"><header> <div class="eth active"><svg id="svg" version="1.1" width="50" height="50" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="display: block;"><g id="svgg"><path id="path0" d="M196.423 21.530 C 195.612 23.471,171.105 64.622,141.963 112.977 C 112.821 161.331,88.735 201.528,88.437 202.304 C 88.050 203.313,103.882 213.162,143.951 236.838 L 200.008 269.960 256.049 236.820 C 296.310 213.011,311.937 203.279,311.546 202.259 C 309.521 196.981,200.545 18.000,199.356 18.000 C 198.554 18.000,197.234 19.588,196.423 21.530 M88.570 226.125 C 90.730 229.818,199.545 382.920,200.000 382.906 C 200.752 382.883,312.004 225.671,311.574 225.240 C 311.168 224.835,207.179 286.081,202.841 289.280 L 200.182 291.242 146.341 259.454 C 116.728 241.971,91.406 226.961,90.070 226.100 C 87.855 224.673,87.722 224.675,88.570 226.125 " stroke="none" fill="#cccccc" fill-rule="evenodd"></path></g></svg></div> <h1>Disperse<sup></sup></h1> <div class="expand"></div> <div><a target="_blank"></a><a href="https://t.me/IncinerateOfficial" target="_blank">telegram</a></div> </header> <p><em>verb</em><span style="font-style: normal"> Distribute BCH or tokens to multiple addresses</span></p></disperse-logo> </section>   <section> <h2>Connect to wallet</h2>  <p>logged in as 0xa9d89a5caf6480496acc8f4096fe254f24329ef0</p> </section> <section> <disperse-currency><div class="chooser"> <label>Send</label> <input type="radio" value="ether" name="what" id="ether"> <label for="ether">ether</label> <label>or</label> <input type="radio" value="token" name="what" id="token"> <label for="token">token</label> </div></disperse-currency>  </section>  <section style="display: none;" hidden=""> <h2>recipients and amounts</h2> <p>enter one address and amount in ETH on each line. supports any format.</p> <div class="shadow"> <textarea ref="addresses" spellcheck="false" placeholder="0x314ab97b76e39d63c78d5c86c2daf8eaa306b182 3.141592
 0x271bffabd0f79b8bd4d7a1c245b7ec5b576ea98a,2.7182
 0x141ca95b6177615fb1417cf70e930e102bf8f584=1.41421"></textarea> </div> </section>  </disperse-app>
   </article>
 
   <script src="./bundle.js"></script>
 
+  <div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div style="
+                    position: fixed;
+                    bottom: 8px;
+                    left: 50px;
+                    font-size: 18px;">
+                        <img src="files/logo.png" height="80">
+                    </div>
+                  <div style="
+                  position: fixed;
+                  bottom: 8px;
+                  left: 150px;
+                  font-size: 18px;">
+                          <a href="https://discord.gg/x3TsF9MBrq" class="text-info" target="_blank" rel="nofollow noopener"><i class="fab fa-discord fa-2x fa-fw"></i></a>
+                          <a href="https://twitter.com/incinerate_cash" class="text-info" target="_blank" rel="nofollow noopener"><i class="fab fa-twitter fa-2x fa-fw"></i></a>
+                          <a href="https://t.me/IncinerateOfficial" class="text-info" target="_blank" rel="nofollow noopener"><i class="fab fa-telegram fa-2x fa-fw"></i></a>
+                          <a href="https://www.reddit.com/r/incinerate_cash" class="text-info" target="_blank" rel="nofollow noopener"><i class="fab fa-reddit fa-2x fa-fw"></i></a>
+                      </p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 offset-lg-1">
+                <div class="row">
+                    <div class="text-lg-end text-right col">
+                      <ul class="list-unstyled" style="
+                      position: fixed;
+                      bottom: 8px;
+                      right: 50px;
+                      font-size: 18px;">
+                          <li class="pb-2">
+                              <a href="https://incinerate.cash" class="lang"
+                                 target="_blank" rel="noopener">Website</a> <i class="fal fa-external-link"></i>
+                          </li>
+                          <li class="pb-2">
+                              <a href="https://emberswap.com" class="lang" target="_blank">
+                                  Swap</a> <i class="fal fa-external-link"></i>
+                          </li>
+                          <li class="pb-2">
+                            <a href="https://github.com/emberswap/disperse" class="lang" target="_blank">
+                                GitHub</a> <i class="fal fa-external-link"></i>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div text-center text-bottom style="position: -webkit-sticky;
+position: sticky;
+top:250rem;">
+    <center>
+        <p class="mb-0 lang"key="bottomtexttrans">No Copyrights © Free The World | Decentralize Everything.</p>
+    </center>
+</div>
+</div>  
+<script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"5RZLnNJ1bjI0MdcO0Y7OA","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
 
 </body></html>
